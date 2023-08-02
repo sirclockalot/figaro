@@ -54,7 +54,7 @@ class NoNonsenseNamingStandard(NamingStandard):
     def getSampleInfo(self, fileName:str):
         import re
         import os
-        regex = '_R?([12])(_\\d\\d\\d)?$'
+        regex = '-R?([12])(_\\d\\d\\d)?$'
         baseName = re.sub("\.(fq|fastq)(.gz)?$", "", os.path.basename(fileName))
         regexResult = re.search(regex, baseName)
         if not regexResult:
